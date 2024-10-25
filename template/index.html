@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .alert {
+            padding: 15px;
+            margin-top: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+        .alert-danger {
+            color: #a94442;
+            background-color: #f2dede;
+            border-color: #ebccd1;
+        }
+        .alert-success {
+            color: #3c763d;
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Phishing Detection</h1>
+        <textarea id="emailText" placeholder="Paste your email text here..."></textarea>
+        <button onclick="checkPhishing()">Check for Phishing</button>
+        <p id="result"></p>
+        <div id="highlight"></div>
+        <div id="alerts"></div>
+    </div>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
